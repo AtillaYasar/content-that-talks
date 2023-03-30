@@ -2,12 +2,12 @@
 "yo what if you can just pause a yt video or like an article and you can just ask its thoughts at a particular moment"
 
 ## ALPHA
-alpha as fuck. more alpha than andrew tate.
-i created this repo as kind of the central hub for code around this idea.
+alpha as fuck. more alpha than andrew tate.  
+i created this repo as kind of the central hub for code around this idea.  
 
 ## two kinds of AI
-The Beast  (language model):  will generate text, and analyze content, and answer questions etc
-The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers monkey brain happy hehe nice sounds
+The Beast  (language model):  will generate text, and analyze content, and answer questions etc  
+The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers monkey brain happy hehe nice sounds  
 
 ## resources, services
 
@@ -50,3 +50,16 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 
 ## proof of concept, and exploration of this idea
 - youtube video i made: https://www.youtube.com/watch?v=-7rV2Eiulpc
+
+## the heart, `index --> string`
+### how so?
+  At the heart of all this, is a function where you feed a location in a video or article, and receive text.  
+  `Text --> speech` is trivial (conceptually)  
+  For videos, the timestamp basically turns into a location (on a linear plane, so it's just a single number).
+  For articles, the location is maybe represented as a string index.
+### details
+  - once you have the text, you just need a "play sound" function. that either grabs a cached tts, or generates it on the spot
+  - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"
+
+
+
