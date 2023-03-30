@@ -38,6 +38,15 @@ with open('main.txt', 'r') as f:
 
 import tkinter as tk
 
+def apply_layout(layout):
+    """Places things in a grid. Takes in a list of lists of widgets."""
+    for i in range(len(layout)):
+        for j in range(len(layout[i])):
+            w = layout[i][j]
+            if w == None:
+                continue
+            w.grid(row=i,column=j)
+
 # function to map tkinter index to normal string index
 def tk_idx_to_idx(w, tk_idx):
     # first sum length of lines before tk_idx
@@ -58,18 +67,38 @@ def tk_idx_to_idx(w, tk_idx):
     return prior_count + col_idx
 
 def on_trigger(event):
-    idx = text_widget.index('insert')
-    charpos = tk_idx_to_idx(text_widget, idx)
-    print(idx_to_context(text, charpos))
-    print(f'charpos:{charpos}')
+    # get context
+    idx = event.widget.index('insert')
+    charpos = tk_idx_to_idx(event.widget, idx)
+    context = idx_to_context(text, charpos)
+    # clear output widget and insert new text
+    output_widget.delete('1.0', 'end')
+    output_widget.insert('1.0', context)
+    print(context)
 
 root = tk.Tk()
 
-text_widget = tk.Text(root)
-text_widget.insert('1.0', text)
-text_widget.pack()
+input_widget = tk.Text(root)
+input_widget.insert('1.0', text)
 
-trigger = 'Escape'
-text_widget.bind(f'<{trigger}>', on_trigger)
+output_widget = tk.Text(root)
+
+# set black bg and grey fg
+style_settings = {
+    'bg': 'black',
+    'fg': 'grey',
+    'font': ('comic sans', 15),
+    'width': 50,
+}
+for w in [input_widget, output_widget]:
+    w.config(**style_settings)
+
+trigger = 'ButtonRelease-1'
+input_widget.bind(f'<{trigger}>', on_trigger)
+
+layout = [
+    [input_widget, output_widget],
+]
+apply_layout(layout)   
 
 root.mainloop()
