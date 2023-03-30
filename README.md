@@ -86,6 +86,7 @@ something something Technoloy Without Industry https://geohot.github.io/blog/jek
 plan is modularity and importability, building the groundwork for projects around this idea. not a "install these 3 lines to use my app" kinda thing.
   ofcourse ill be the main user of this repo for a while. and am mostly building it for myself, tho expecting others will find it useful.
 
-
+### even more concrete:
+copypast things ive made in the past to interact with tts and chatgpt apis
 
 
