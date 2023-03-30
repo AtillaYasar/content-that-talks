@@ -10,7 +10,7 @@ sys.path.append(root_path)
 from secrets import elevenlabs_key
 import requests, json, time, base64
 
-def use_tts(voice_id, string, output_path):
+def generate_and_save(voice_id, string, output_path):
     """Uses the elevenlabs tts api to convert a string to an audio file. Returns the path to the audio file."""
 
     # payload and headers for api request
@@ -51,20 +51,21 @@ def get_name_ID_mapping():
     d = json.loads(c)
 
     # d is a list of dicts. example dict:
+    ## (substituted None for null, and False for false to prevent errors when running this.)
     {
         "voice_id": "ofKgYdqLcAQu3Z53STPl",
         "name": "emma",
-        "samples": null,
+        "samples": None,
         "category": "generated",
         "fine_tuning": {
-            "model_id": null,
-            "is_allowed_to_fine_tune": false,
-            "fine_tuning_requested": false,
+            "model_id": None,
+            "is_allowed_to_fine_tune": False,
+            "fine_tuning_requested": False,
             "finetuning_state": "not_started",
-            "verification_attempts": null,
+            "verification_attempts": None,
             "verification_failures": [],
             "verification_attempts_count": 0,
-            "slice_ids": null
+            "slice_ids": None
         },
         "labels": {
             "accent": "british",
@@ -73,7 +74,7 @@ def get_name_ID_mapping():
         },
         "preview_url": "https://storage.googleapis.com/eleven-public-prod/WMn7xNzYZcbqzQvkWhHQjaDW2wV2/voices/ofKgYdqLcAQu3Z53STPl/74972b58-bbe8-48b9-b79e-d0eb4aa5bcd0.mp3",
         "available_for_tiers": [],
-        "settings": null
+        "settings": None
     }
 
     # extract the names and ids
@@ -118,4 +119,4 @@ def edit_voice(name, new_settings):
         'labels': serialize(new_settings),
     }
     response = requests.post(url, headers=headers, data=data)
-    print('edit_voice response:', response.json())
+    # print('edit_voice response:', response.json())
