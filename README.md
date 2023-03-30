@@ -51,12 +51,13 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 ## proof of concept, and exploration of this idea
 - youtube video i made: https://www.youtube.com/watch?v=-7rV2Eiulpc
 
-## the heart, `index --> string`
+## the heart, `location --> string`
 ### how so?
   At the heart of all this, is a function where you feed a location in a video or article, and receive text.  
   `Text --> speech` is trivial (conceptually)  
   For videos, the timestamp basically turns into a location (on a linear plane, so it's just a single number).  
-  For articles, the location is maybe represented as a string index.
+    (and a video itself is represented as a bunch of text anyway, where each bit of text is mappepd to a timestamp)
+  For articles, the location is maybe a string index.
 ### details
   - once you have the text, you just need a "play sound" function. that either grabs a cached tts, or generates it on the spot  
   - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"  
