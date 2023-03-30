@@ -55,11 +55,11 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 ### how so?
   At the heart of all this, is a function where you feed a location in a video or article, and receive text.  
   `Text --> speech` is trivial (conceptually)  
-  For videos, the timestamp basically turns into a location (on a linear plane, so it's just a single number).
+  For videos, the timestamp basically turns into a location (on a linear plane, so it's just a single number).  
   For articles, the location is maybe represented as a string index.
 ### details
-  - once you have the text, you just need a "play sound" function. that either grabs a cached tts, or generates it on the spot
-  - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"
+  - once you have the text, you just need a "play sound" function. that either grabs a cached tts, or generates it on the spot  
+  - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"  
   - then connected to the heart (whatever the biological analogy is) you have code that takes that mapping function and uses it to play a sound when a "user" (another piece of code or a literal human user (probably the former)) feeds it an index
 
 
