@@ -60,6 +60,6 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 ### details
   - once you have the text, you just need a "play sound" function. that either grabs a cached tts, or generates it on the spot
   - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"
-
+  - then connected to the heart (whatever the biological analogy is) you have code that takes that mapping function and uses it to play a sound when a "user" (another piece of code or a literal human user (probably the former)) feeds it an index
 
 
