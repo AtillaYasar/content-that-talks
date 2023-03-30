@@ -92,4 +92,6 @@ plan is modularity and importability, building the groundwork for projects aroun
 ### even more concrete:
 copypast things ive made in the past to interact with tts and chatgpt apis
 
+# misc
+this is motivated partly by my desire to have a female voice of my choosing narrate, explain, comment on, absolutely any piece of content i consume. GOT A PROBLEM WITH THAT?
 
