@@ -21,7 +21,7 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
     - I also really like the NAI community and the devs, which would make working closely with them, more fun
   - pricing makes this the best option for some use cases  (maybe a lot)
 - custom options
-  - tortoise, tortoisefast
+  - tortoise, tortoisefast, llama, alpaca, gpt4all, gpt5yomother, sheep, goat, whatever the heck open source stuff people made
   - this path requires way more programming skill  :p
   - basically, I'd build my own API for text and/or speech, instead of using one of the above. should only be relevant if pricing becomes a big problem.
     - (but then, it's kind of insane to think I can build a better API than those guys... especially the NAI guys)
