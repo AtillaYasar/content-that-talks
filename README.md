@@ -66,6 +66,8 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 ## plan of action
 "enough talk, show me the code"  <-- i think from George Hotz, but dont remember :p  
 
+### build one module at a time
+
 ### reduce complexity (by a lot)
 #### frozen parameters
 - TTS:
@@ -78,6 +80,12 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 - limit "frontend" to cached files and cached text.
 #### dynamic variables
 - chatgpt prompt engineering. has too much unexplored space, and no "just do this and itll be fine" thing.
+
+#### general strategy
+something something Technoloy Without Industry https://geohot.github.io/blog/jekyll/update/2021/01/18/technology-without-industry.html  
+plan is modularity and importability, building the groundwork for projects around this idea. not a "install these 3 lines to use my app" kinda thing.
+  ofcourse ill be the main user of this repo for a while. and am mostly building it for myself, tho expecting others will find it useful.
+
 
 
 
