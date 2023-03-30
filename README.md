@@ -63,4 +63,21 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
   - the mapping function (conceptually speaking) is kind of like an assert, that says "if you have this, your code works"  
   - then connected to the heart (whatever the biological analogy is) you have code that takes that mapping function and uses it to play a sound when a "user" (another piece of code or a literal human user (probably the former)) feeds it an index
 
+## plan of action
+"enough talk, show me the code"  <-- i think from George Hotz, but dont remember :p  
+
+### reduce complexity (by a lot)
+#### frozen parameters
+- TTS:
+  + I have an ElevenLabs voice that I really like and is easy to generate.
+  + "young british female" generated with the Voice Synthesis option and with 0.2 stability and 0.3 "clarity + similarity enhancement"
+- text generation:
+  + ChatGPT api
+  + limit context to some character or word count, raise error when it goes above it. (dont know how much yet)
+    - as opposed to doing some summarization/retrieval tricks to let ChatGPT comment on things larger than its total context
+- limit "frontend" to cached files and cached text.
+#### dynamic variables
+- chatgpt prompt engineering. has too much unexplored space, and no "just do this and itll be fine" thing.
+
+
 
