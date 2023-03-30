@@ -48,3 +48,5 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
   - get textgen
     - huge amount of variables regarding what kinds of analysis to get, how to craft context, how many things to ask at any given point, etc etc
 
+## proof of concept, and exploration of this idea
+- youtube video i made: https://www.youtube.com/watch?v=-7rV2Eiulpc
