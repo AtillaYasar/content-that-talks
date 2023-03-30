@@ -71,15 +71,18 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
 ### reduce complexity (by a lot)
 #### frozen parameters
 - TTS:
+  + stick to one voice
   + I have an ElevenLabs voice that I really like and is easy to generate.
   + "young british female" generated with the Voice Synthesis option and with 0.2 stability and 0.3 "clarity + similarity enhancement"
 - text generation:
   + ChatGPT api
   + limit context to some character or word count, raise error when it goes above it. (dont know how much yet)
     - as opposed to doing some summarization/retrieval tricks to let ChatGPT comment on things larger than its total context
-- limit "frontend" to cached files and cached text.
 #### dynamic variables
 - chatgpt prompt engineering. has too much unexplored space, and no "just do this and itll be fine" thing.
+#### undecided variables
+- on the spot generation vs caching
+  - on the spot generation will be more fun. caching is more rigid, probably more complicated, but makes textgen and ttsgen happen instantly.
 
 #### general strategy
 something something Technoloy Without Industry https://geohot.github.io/blog/jekyll/update/2021/01/18/technology-without-industry.html  
