@@ -12,7 +12,7 @@
 - cache chatgpt outputs and tts. (seperately)
 - context widget is updated whenever you click in the `input_text` widget (top left)
 - when you press f5, the top right panel is parsed as a json. so the user can always edit.
-  + so the user gets multiple moments to customize the chatgpt output:
+  + so the user gets multiple moments to customize the chatgpt input:
     - by clicking somewhere else in the text  (though the default parser ignores paragraph, and just asks about the full article. but the paragraph at the curser does get extracted and fed to the generator. i just didnt find a nice use of the paragraph's text)
     - by writing the generator  (though right now, there is no parser to create a generator from the bottom left panel. i only have the architecture in place, that lets you write a parser, which would then let the user write a script to create a context generator function)
     - by editing the top right panel manually, which is a json string that is parsed by `json.loads` and fed to the chatgpt api as the `messages` object
