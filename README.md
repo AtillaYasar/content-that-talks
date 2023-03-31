@@ -1,6 +1,16 @@
 # content-that-talks
 "yo what if you can just pause a yt video or like an article and you can just ask its thoughts at a particular moment"
 
+## current features
+- get captions from youtube url if it has hand-written (as opposed to auto-generated) english captions, write to `initial_text_widget`
+- detect paragraph
+- feed paragraph and full text (content of `initial_text_widget`) into a generator function, which creates the `messages` object for ChatGPT
+  + architecture for making a parser, which can return that generator function. currently, there's only 2 options:
+    - you write "chatgpt articles", which makes it use the default `messages` generator, to write a json string to the `context_widget`, where ChatGPT will take on the persona of the person who wrote the text
+    - or you write something else, in which case you get an error message written to the `context_widget`
+- speak chatgpt outputs with tts
+- cache chatgpt outputs and tts. (seperately)
+
 ## ALPHA
 alpha as fuck. more alpha than andrew tate.  
 i created this repo as kind of the central hub for code around this idea.  
