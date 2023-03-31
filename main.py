@@ -58,7 +58,7 @@ def use_chatgpt(messages):
     ai_response = response['choices'][0]['message']['content']
     return ai_response
 
-def craft_messages(full_text, paragraph):
+def chatgpt_articles(full_text, paragraph):
     """Given full text and paragraph, will craft messages for use with OpenAI chat API."""
 
     messages = [
@@ -188,6 +188,19 @@ def tk_idx_to_idx(w, tk_idx):
     col_idx = int(tk_idx.split('.')[1])
     return prior_count + col_idx
 
+def get_generator(settings_string):
+    """Given a settings string, will return a generator function.
+    
+    Note:
+    this can be expanded and richened arbitrary.
+    the point is, the architecture is now in place for taking in a settings string and returning a generator function.
+    """
+
+    if settings_string == 'chatgpt articles':
+        return chatgpt_articles
+    else:
+        return None
+
 def on_trigger(event):
     """This is the trigger for generating the context (messages for chatgpt) and updating the context widget.
     
@@ -201,9 +214,8 @@ def on_trigger(event):
 
     # get messages generator, then generate messages
     settings_string = settings_widget.get('1.0', 'end')[:-1]
-    if settings_string == 'default':
-        message_generator = craft_messages
-    else:
+    message_generator = get_generator(settings_string)
+    if message_generator == None:
         # just write an error message to context widget
         context_widget.delete('1.0', 'end')
         context_widget.insert('1.0', 'settings string not recognized')
@@ -279,42 +291,6 @@ class Cache:
         self.cache.append({'input':inp, 'output':outp})
         self.save_cache()
 
-class CacheABC(ABC):
-    """I'm making this to kinda practice the caching concept.
-    
-    In general, the point of a cache is to store data that is expensive to generate.
-    So it needs a function that searches for the output corresponding to the input, and a function that adds the input and output to the cache.
-
-    ill start by making just everything an abstract method, then try to figure out what is general, and what is specific to the chatgpt cache.
-    """
-
-    def __init__(self, filename):
-        self.filename = filename
-        if not os.path.exists(self.filename):
-            with open(self.filename, 'w') as f:
-                json.dump([], f)
-        self.cache = self.load_cache()
-    
-    @abstractmethod
-    def load_cache(self):
-        # called on initialization
-        pass
-    
-    @abstractmethod
-    def save_cache(self):
-        # should be called after adding to cache
-        pass
-    
-    @abstractmethod
-    def get(self, inp):
-        # called to find an input in the cache
-        pass
-    
-    @abstractmethod
-    def add(self, inp, outp):
-        # add to cache
-        pass
-
 ## wrapper around generate_and_save
 def tts(text):
     # prepare request
@@ -369,7 +345,7 @@ initial_text_widget = tk.Text(inputs_frame)
 initial_text_widget.insert('end', default_text)
 settings_widget = tk.Text(inputs_frame)
 default_settings_text = '''
-default
+chatgpt articles
 '''[1:-1]
 settings_widget.insert('1.0', default_settings_text)
 
