@@ -1,0 +1,86 @@
+Image Generation Basics & Prompt Basics
+Basics
+Figure out your prompt
+Pick your favorites to Edit, Generate Varieties or Enhance
+(Optional) Adjust your text prompt, generation settings, or the image itself with our Edit Image canvas
+Adjust Strength & Noise / Steps & Scale / refocus your text prompt
+Try different Image Resolution aspect ratios for different results
+Already got the hang of things? Try more advanced image generation methods: Upload Image, use the Canvas, or explore Prompt Mixing
+
+How do I word my prompt?
+Prose vs Tagging: You might try just using prose for your prompt, describing things in full sentences, but the most efficient way, for now, is a subject description accompanied by tags. The AI will suggest tags it is familiar with as you type.
+
+Token Limit: Watch your Context Limit bar! It displays how much space is left for your prompt! As always, keep in mind that the AI can only see a specific number of letters, so overly verbose, lengthily tagged descriptions might hinder your goals until future technological advancements.
+
+Watch the Context Limit bar fill up!
+
+Goose Tip: Note the bar to the right of your prompt text field! It will slowly fill up as indication of how close you are to the limit of your text prompt context size.
+
+Order matters: Try switching up the order of your subject and tags! Results can vary greatly depending on where you locate vectors in the prompt. It is advised to keep the most important things in the front half of your prompt.
+
+Emphasize it: Does the AI ignore the tags you give it? Surround tags with {} to strengthen or weaken with []. This can fix the issue of other vectors overpowering what you want the AI to really focus on!
+
+Goose Tip: We highly recommend prompt experimentation. Generate normally or use a low step amount to see which words have the best effect for your purpose or explore which tags you favor by combining different things.
+
+What are all those Settings?
+Steps
+Steps define the number of iterations the AI should refine from the initial creation of your prompt. You can use a low amount to quickly generate and see the way your image is headed, or you can use more Steps to generate a full image. Too many Steps may also be counterproductive or no longer refine your generation. If you want to save Anlas you can keep Steps relatively low until you find a generation with a composition you like and use the Enhance button on it for further refinement.
+
+Goose Tip: Enhance will continue to consider your text prompt, so you may adjust your text prompt to focus on areas you find lacking or were ignored during the initial generation.
+
+Scale
+The Scale value indicates how much the AI will respond to your prompt and how much freedom it has to interpret. A greater value can help the AI stick closer to the overall intent of your text prompt, but if set too high, it may have an adverse effect.
+
+Sometimes the Scale value will adjust how refined and strong the final generation will be: a lower Scale number can be more painterly, dreamy, and softer, while a higher Scale value provides more fine detail and sharpness.
+
+What is a Seed?
+The Seed specifies the exact way the AI calculates your individual image. Each random generation has a unique seed. You can copy the Seed by hovering over a generation and clicking the Seed number in the bottom left. Seed numbers can also be found in the filename of downloaded generations.
+
+Plugging in a previously generated Seed can assist the AI to generate in the same direction.
+
+Goose Tip: The seed of a generation is always visible on the bottom left of your generation if you select it! You can also find it in the Exif data of a saved file.
+
+To find the seed of a previous generation, use the history bar, find the desired generation image, and click the number visible on the bottom left. Clicking the number will automatically copy the seed number for you to paste where you need it.
+
+Enhance
+Enhance passes generated images through the process a second time to improve upon them, based on the prompt.
+
+The Magnitude slider is a combination of value combinations: Strength & Noise. You can use the Magnitude slider or select the Show Individual Settings option to set the values yourself:
+
+High Strength allows the AI to change the image composition. Lower Strength will stick closer to the original generation.
+
+Noise may allow the AI to generate more details but can cause strange artifacts if set too high.
+
+I still don't know how to word my prompt! What can I do?
+If the quality of your generation is lackluster, add
+masterpiece, best quality, high quality to your prompt, this will pull higher quality vector data and should instantly improve your results.
+
+Focus / Subject
+The focus of your prompt should be in the first half of your generation, for example: the sorcerers, a tiny kitten, clashing swords, a book - anything you can think of that should be the primary focus for your image - or - if you want a more esoteric kind of generation with surprising outcomes then input whatever comes to mind!
+
+Style / Framing Method / Artist / Medium / Time or Era
+Adding a style or framing can focus the AI's vision on your subject: close up, portrait, landscape, wide angle, and so on. It also has the ability to influence the style of your image.
+
+Example: Adding portrait before your prompt can make the shot much more focused, give a different composition and dynamic.
+
+portrait of a ...
+You can always try to define the object of your generation with 1x and preface your prompt.
+
+1girl, 1boy, 1other etc.
+Medium
+If you define a medium, the AI can procure interesting results! Give some unique ones a try if you feel like it, or type a medium and check some of the suggested tags!
+
+Example: 3d, animated, watercolor, ink, pen, copics, graphite, watercolor pencil, spot color etc.
+
+Goose Tip: Mix it up! Combine different styles or use unusual media to get surprising results!
+
+Framing
+Framing Tag Examples: atmospheric perspective dutch angle fisheye panorama vanishing point perspective pov rotated sideways upside-down from above from behind from below
+
+Time or Era
+If you provide the AI with a time, then it can implement elements of it into your image. 1990s, 1980s, 1800s, renaissance, rococo, retro artstyle etc. You can always check the tag suggestions that pop up as well!
+
+Object Focus
+If you type focus the AI can suggest what type of focus the generation should have.
+
+Example: animal focus, eye focus, cloud focus, vehicle focus, weapon focus, soft focus

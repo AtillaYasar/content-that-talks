@@ -1,0 +1,1 @@
+openai_key = 'get your own key.'
