@@ -1,21 +1,11 @@
 # content-that-talks
 "yo what if you can just pause a yt video or like an article and you can just ask its thoughts at a particular moment"
 
-## current features
-- get captions from youtube url if it has hand-written (as opposed to auto-generated) english captions, write to `initial_text_widget`
-- detect paragraph
-- feed paragraph and full text (content of `initial_text_widget`) into a generator function, which creates the `messages` object for ChatGPT
-  + architecture for making a parser, which can return that generator function. currently, there's only 2 options:
-    - you write "chatgpt articles", which makes it use the default `messages` generator, to write a json string to the `context_widget`, where ChatGPT will take on the persona of the person who wrote the text
-    - or you write something else, in which case you get an error message written to the `context_widget`
-- speak chatgpt outputs with tts
-- cache chatgpt outputs and tts. (seperately)
-- context widget is updated whenever you click in the `input_text` widget (top left)
-- when you press f5, the top right panel is parsed as a json. so the user can always edit.
-  + so the user gets multiple moments to customize the chatgpt input:
-    - by clicking somewhere else in the text  (though the default parser ignores paragraph, and just asks about the full article. but the paragraph at the curser does get extracted and fed to the generator. i just didnt find a nice use of the paragraph's text)
-    - by writing the generator  (though right now, there is no parser to create a generator from the bottom left panel. i only have the architecture in place, that lets you write a parser, which would then let the user write a script to create a context generator function)
-    - by editing the top right panel manually, which is a json string that is parsed by `json.loads` and fed to the chatgpt api as the `messages` object
+## current state of this repo
+- work kinda culminated in examples/chatgpt_plus_tts
+  + which shows the idea of this repo. the repo provides modules and code and things, so you can make a "content-that-talks" app happen.
+- it has a bunch of features: extracting youtube titles, detecting full text and paragraph of the cursor within there, creating a context for chatgpt, generating tts off of chatgpt output, caching tts and chatgpt outputs, using chatgpt and elevenlabs tts api, adding and removing messages, and has architecture for creating a toy scripting language that can let users write (or describe) algorithms for context-generators.
+  + ill improve documentation around all of that at some point maybe.
 
 ## ALPHA
 alpha as fuck. more alpha than andrew tate.  
