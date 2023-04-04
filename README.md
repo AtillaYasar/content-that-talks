@@ -33,6 +33,14 @@ The Beauty  (tts generator):  will turn ugly booh eww text into woah poggers mon
     - (but then, it's kind of insane to think I can build a better API than those guys... especially the NAI guys)
       - but good to at least know it's an option
 
+## content extraction
+- youtube transcripts:
+  + you can use this to get transcripts of an audio https://github.com/AtillaYasar/random-collection-of-things/blob/main/openai_whisper_cached.py 
+    - (using OpenAI's Whisper API, 0.6 cents per minute, = 36 per hour. it's not free, but still quite cheap.)
+    - i added code for converting the outputs to start and end times (converted to seconds), mapped to text
+  + you can use this to get audio of a youtube video https://github.com/AtillaYasar/random-collection-of-things/blob/main/pytube_wrapper.py
+
+
 ### repositories/code
 - my own? idk. i havent looked around that much. will link to what i have later.
 
